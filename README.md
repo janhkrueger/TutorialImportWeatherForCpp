@@ -56,6 +56,15 @@ In order to run, we need some software components. On modern debian systems you 
 apt-get install g++ make curl libcurl4-openssl-dev libpq-dev libpqxx-dev
 ```
 
+## Intialise the submodules
+We need the submodules before we can compile or even run the programm.
+
+```
+git submodue update --init
+```
+Please refer to the separate README files if and how to build the submodules.
+
+
 ## Compile the programm
 Now we can compile everything. Simply run:
 
