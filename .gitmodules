@@ -1,0 +1,9 @@
+[submodule "frameworks/rapidjson"]
+	path = frameworks/rapidjson
+	url = https://github.com/Tencent/rapidjson
+[submodule "frameworks/spdlog"]
+	path = frameworks/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "frameworks/curlpp"]
+	path = frameworks/curlpp
+	url = https://github.com/jpbarrette/curlpp

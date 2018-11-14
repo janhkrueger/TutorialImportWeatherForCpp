@@ -1,4 +1,5 @@
-REPO=$(HOME)/insulae-private
+EXECUTABLE=ReadWeatherSource
+
 SRC=src
 BIN=bin
 BINCOV=coverage
@@ -6,12 +7,10 @@ BINCOV=coverage
 CC=g++
 CFLAGS=-std=c++17 -flto -pthread -D_FORTIFY_SOURCE=2 -pie -fPIE -ftrapv -Wl,-z,relro,-z,now -fpic -fvisibility=hidden -fstack-check -fstack-protector-all --param ssp-buffer-size=1 -fmessage-length=0
 CWARNINGS=-Wextra -Wconversion -Wsign-conversion -Wformat-nonliteral -Wstack-protector -Wno-unused-parameter -Wformat=2 -Wformat-security -Winit-self -Wuninitialized -Wswitch-default -Wswitch-enum -Wunused-but-set-parameter -Wunused-parameter -Wunused-but-set-variable -Wfloat-equal -Wshadow -Wunreachable-code
-CINCLUDES=-I$(SRC) -I/usr/include/postgresql -I frameworks/rapidjson/include/ -I frameworks/spdlog/include/ -I/usr/local/include/pistache/ -I/usr/include -Iinclude -includelibpq-fe.h
-CLIBS=-lpistache -lpqxx -lpq -Llib -lcurlpp -lcurl
+CINCLUDES=-I$(SRC) -I/usr/include/postgresql -I frameworks/rapidjson/include/ -I frameworks/spdlog/include/ -I/usr/include -Iinclude -includelibpq-fe.h
+CLIBS=-lpqxx -lpq -Llib -lcurlpp -lcurl
 
-EXECUTABLE=$(parm)
-
-SOURCES=$(SRC)/Batch.cpp $(SRC)/GameDate.cpp $(SRC)/Market.cpp $(SRC)/Taxes.cpp $(SRC)/Coordinates.cpp $(SRC)/Town.cpp $(SRC)/TownList.cpp $(SRC)/Weather.cpp $(SRC)/WeatherFactory.cpp $(SRC)/TownFactory.cpp $(SRC)/$(EXECUTABLE).cpp
+SOURCES=$(SRC)/Batch.cpp $(SRC)/Weather.cpp $(SRC)/WeatherFactory.cpp $(SRC)/$(EXECUTABLE).cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
 all:
