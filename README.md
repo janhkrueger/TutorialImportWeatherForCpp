@@ -101,3 +101,9 @@ bin/ReadWeatherSource
 ```
 
 That's it. You now should have an entry in the table world.weather with the current data.
+
+
+
+
+# Important warning
+The error handling in this sample is reduced because my regular used routines from https://git.janhkrueger.de/insulae/insulae-private are still not open for the public. So no fancy error handling. Nonetheless, there should be no nard errors or atomar explosions.
