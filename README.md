@@ -31,6 +31,8 @@ psql -U {user_name} -d {database_name} -f db/createTables.sql -h {host_name}
 
 If everything is right there should now both tables in your database.
 
+## Getting an OpenWeatherMap api key
+To read data from the openweathermap.org api, we need to create an account and request an api key. Please refer to https://home.openweathermap.org/users/sign_up for the details.
 
 ## Adjust the config file
 In the file "insulae.cfg" the central config is stored
