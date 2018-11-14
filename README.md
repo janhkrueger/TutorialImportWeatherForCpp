@@ -1,4 +1,4 @@
-Import Weather in Insulae
+# Import Weather in Insulae
 
 ## What you need
 * A postgresql database
@@ -6,13 +6,17 @@ Import Weather in Insulae
 * g++, make, curl, libcurl4-openssl-dev libpq-dev libpqxx-dev
 * an OpenWeathermap.org api key
 
-
-
-
 ## Dependencies
 * Tencent/rapidjson
 * jpbarrette/curlpp
 * gabime/spdlog
+
+## Creating relevant subfolders
+```
+mkdir bin
+mkdir log
+mkdir coverage
+```
 
 
 ## Creating the relevant tables
@@ -46,3 +50,8 @@ appid=[INSERT YOUR OpenWeathermap API KEY]
 Insert your values and your're set.
 
 ## Install OS dependencies
+In order to run, we need some software components. On modern debian systems you can install them via apt. For other destribution please refer to the designated repostories.
+
+```
+apt-get install g++ make curl libcurl4-openssl-dev libpq-dev libpqxx-dev
+```
