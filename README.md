@@ -82,3 +82,20 @@ export GLIBCXX_FORCE_NEW=false
 ```
 
 The output is in the subfolder bin, named "ReadWeatherSource"
+
+## Add a weathersource to watch
+Now we are, theoretically, able to read current weather data and import it for further useage.
+But we need a definition what places we want to want. So we insert a new place in the table foundation.weathersource
+
+```
+INSERT INTO weathersource (id, locationname, active) VALUES ('3413829', 'Reykjavik', '1');
+```
+
+## Running the program
+Everythig is up, we can now run the programm for the first time.
+
+```
+bin/ReadWeatherSource
+```
+
+That's it. You now should have an entry in the table world.weather with the current data.
