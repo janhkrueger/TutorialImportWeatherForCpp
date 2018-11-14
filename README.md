@@ -55,3 +55,21 @@ In order to run, we need some software components. On modern debian systems you 
 ```
 apt-get install g++ make curl libcurl4-openssl-dev libpq-dev libpqxx-dev
 ```
+
+## Compile the programm
+Now we can compile everything. Simply run:
+
+```
+make
+```
+
+You should see the following output
+
+```
+export GLIBCXX_FORCE_NEW=true                                                                                                                                                                                                                                                                                                                                                               
+g++ -std=c++17 -flto -pthread -D_FORTIFY_SOURCE=2 -pie -fPIE -ftrapv -Wl,-z,relro,-z,now -fpic -fvisibility=hidden -fstack-check -fstack-protector-all --param ssp-buffer-size=1 -fmessage-length=0 -O3 src/Batch.cpp src/Weather.cpp src/WeatherFactory.cpp src/ReadWeatherSource.cpp -lpqxx -lpq -Llib -lcurlpp -lcurl -Isrc -I/usr/include/postgresql -I frameworks/rapidjson/include/ -I
+ frameworks/spdlog/include/ -I/usr/include -Iinclude -includelibpq-fe.h -o bin/ReadWeatherSource                                                                                                                                                                                                                                                                                            
+export GLIBCXX_FORCE_NEW=false                                                                                                                                                                                                                                                                                                                                                              
+```
+
+The output is in the subfolder bin, named "ReadWeatherSource"
