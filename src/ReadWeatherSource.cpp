@@ -229,7 +229,8 @@ int main() {
     txn.commit();
     for (auto & element : _weatherList) {
       wTown = "http://api.openweathermap.org/data/2.5/weather?" \
-              "appid=adf4646744e3b8d12bf7f52c69e2ac44&units=metric&id=" \
+              "appid=" + b.getConfigValue("appid") + \
+              "&units=metric&id=" \
               +std::to_string(element);
       try {
         workTown(wTown, C, b.getConfigValue("weatherjobname"));
