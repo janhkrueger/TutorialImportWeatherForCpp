@@ -81,8 +81,11 @@ pipeline {
                     "ReadWeatherSource" : {
                         sh 'make -f build/makeGeneric parm=ReadWeatherSource'
                     }
+		          )
 		        }
 		    } // Ende build
+
+
      } // Ende Stages
     post {
         always {
