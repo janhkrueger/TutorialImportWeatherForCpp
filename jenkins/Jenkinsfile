@@ -60,7 +60,7 @@ pipeline {
             steps {
                 parallel (
                     "ReadWeatherSource" : {
-                        sh 'make -f build/makeGeneric parm=ReadWeatherSource'
+                        sh 'make'
                     }
 		          )
 		        }
