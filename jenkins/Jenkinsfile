@@ -41,16 +41,6 @@ pipeline {
 		stage('build frameworks') {
 		    steps {
                 parallel (
-                    "Pistache" : {
-					    sh """
-					        cd frameworks/pistache
-                            mkdir -p build
-                            cd build
-                            cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ..
-                            make
-                            sudo make install
-					    """
-                    },
                     "curlpp" : {
 		            sh """
 			    cd frameworks/curlpp
@@ -60,17 +50,8 @@ pipeline {
                             make
                             sudo make install
 			    """
-                    },
-                    "Catch" : {
-					    sh """
-					        cd frameworks/Catch
-                            mkdir -p build
-                            cd build
-                            cmake ..
-                            make
-                            sudo make install
-					    """                      
                     }
+
 				) // Ende Parallel
             } // Ende Framework Steps
         } // Ende Stage build framework
