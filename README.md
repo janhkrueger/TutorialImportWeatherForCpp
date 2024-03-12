@@ -1,6 +1,5 @@
 # Import Weather in Insulae
 
-[![Build Status](https://jenkins.janhkrueger.de/buildStatus/icon?job=ImportWeather)](https://jenkins.janhkrueger.de/job/ImportWeather/)
 
 ## What you need
 * A postgresql database
